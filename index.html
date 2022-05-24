@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div id="app">
+        <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="data:image/jpeg;base64,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" alt="Card image cap">
+                <div class="card-body">
+                <h5 class="card-title">{{tittle}}</h5>
+                <input type="text" class="pesquisarObjeto">
+                <a href="#" class="btn btn-success" class="pesquisarObjetoBTN">Pesquisar</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="objetoRastreado">
+        </div>
+    </div>
+</body>
+
+<script>
+
+    let messagePatthern = `<div class="row mx-0 align-items-center">
+    <div class="col-4 col-md-3 text-center py-3">
+    <img src="">
+    <p class="mt-3 mb-0 smaller-xs-text"><small class="">date<br></small class="">hour</p>
+    </div>
+    <div class="col-8 col-md-9 pl-4">
+    <div class="row align-items-center">
+    <div class="col-md-6">
+    <p class="mb-0 ">mensagemAoUsuario</p>
+    <p class="smaller-text text-mediumgray mb-0">location</p>
+    </div>
+    <div class="col-md-6 text-md-right text-left mt-2 mt-md-0">
+    </div>
+    </div>
+    </div>
+    </div>`
+
+    function objetoPesquisa(objetoASerRastreado)
+    {
+        $.ajax(
+        {
+            url: "https://site.vouer.com.br/api/v1/get_track/" + objetoASerRastreado,
+        }).done(function(data)
+        {
+            let formactedData = JSON.parse(data);
+            
+            for(let i = 0; i < Object.keys(formactedData).length ; i++)
+            {
+                let date = formactedData[i].date
+                let hour = formactedData[i].hour
+                let location = formactedData[i].location
+                // let action = formactedData[i].action -> IMPLEMENTAR
+                let message = formactedData[i].message
+
+                let tempMessage = messagePatthern
+
+                tempMessage = tempMessage.replace("date", date)
+                tempMessage = tempMessage.replace("hour", hour)
+                tempMessage = tempMessage.replace("location", location)
+                tempMessage = tempMessage.replace("mensagemAoUsuario", message)
+                
+                // if(i = 0)
+                // {
+                //     $("#objetoRastreado").append(`<br class="pb-3">`)
+                // }
+
+                $("#objetoRastreado").append(`${tempMessage}<br><br>`)
+            }
+        })
+    }
+
+    var app = new Vue(
+    {
+        el: '#app',
+        data: 
+        {
+            tittle: 'Digite o seu código de rastreio'
+        }
+    })
+
+    $(".pesquisarObjeto").keyup(function(event) {
+        let objetoASerRastreado = $(this).val()
+        if(event.key == "Enter")
+        {
+            objetoPesquisa(objetoASerRastreado)
+        }
+    })
+
+    $(".pesquisarObjetoBTN").click(function(event) {
+        let objetoASerRastreado = $(pesquisarObjeto).eq(0).val()
+        objetoPesquisa(objetoASerRastreado)
+    })
+</script>
+</html>
